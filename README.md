@@ -31,3 +31,7 @@ The official way is to create a CFCore account and generate an API key. This is 
 Visit this link for more informations : https://core.curseforge.com/
 
 ### Note : You must use java 8 before version 321 due to some conflicts due to the latest JAVA updates
+
+If you encounter any problem, do not hesitate to join the RagnaMod Community discord by clicking on the link below or open an issue on GitHub.
+
+[![Discord](https://cdn.discordapp.com/attachments/934134390726995999/934150251391102976/Discord.png)](https://discord.gg/bjjvFj9yQC)
