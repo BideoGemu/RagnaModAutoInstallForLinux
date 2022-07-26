@@ -17,7 +17,7 @@ ThermalFoundation-1.12.2-2.6.3.27-universal.jar is not avaible anymore on curse 
 ### NOTE: You can also take these files in the mods folder of your local installation
 
 - Copy mods files for Thermal Foundation, EnderStorage, MooFluids & questbook on mods directory
-- Enter your API Key on server-setup-config.yaml (line 83) : `curseForgeAPIKey: XXX`
+- Enter your API Key on server-setup-config.yaml (line 97) : `curseForgeAPIKey: XXX`
 - Put all files on your server
 - Launch `chmod +x startserver.sh`
 - Launch `sh startserver.sh`
@@ -29,3 +29,5 @@ ThermalFoundation-1.12.2-2.6.3.27-universal.jar is not avaible anymore on curse 
 The official way is to create a CFCore account and generate an API key. This is the easiest and most straight forward way, but CurseForge allows mod/modpack creators to disable third-parties from being able to access the download URL through the API, so some mods may not be able to be downloaded automatically.
 
 Visit this link for more informations : https://core.curseforge.com/
+
+### Note : You must use java 8 before version 321 due to some conflicts due to the latest JAVA updates
