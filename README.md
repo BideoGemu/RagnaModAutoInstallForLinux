@@ -1,6 +1,6 @@
 # RagnaMod modpack auto install script Linux Side
 
-### NOTE: this is for modpack version 6.1.6
+### NOTE: this is for modpack version 6.1.7
 
 To download the modpack go to https://www.curseforge.com/minecraft/modpacks/ragnamod-vi
 

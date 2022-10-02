@@ -14,7 +14,7 @@ install:
   installerUrl: "http://files.minecraftforge.net/maven/net/minecraftforge/forge/{{@mcversion@}}-{{@loaderversion@}}/forge-{{@mcversion@}}-{{@loaderversion@}}-installer.jar"
   installerArguments:
     - "--installServer"
-  modpackUrl: https://media.forgecdn.net/files/3725/620/Ragnamod-VI-6.1.6.zip
+  modpackUrl: https://media.forgecdn.net/files/4014/521/Ragnamod-VI-6.1.7.zip
   modpackFormat: curse
 
   # Settings which are specific to the format used, might not be needed in some casese
@@ -37,6 +37,7 @@ install:
       - 326950
       - 237701
       - 391382
+      - 448233
       - 358191
       - 271740
       - 428199
