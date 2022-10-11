@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -eu
+
 DO_RAMDISK=0
 RED="\e[31m"
 GREEN="\e[32m"
@@ -11,17 +14,17 @@ mkdir -p server
 cp eula.txt server
 
 echo -e "${INFORMATION}Check requirement on your system.${ENDCOLOR}"
-if command -v wget >> /dev/null; then
+if command -v wget > /dev/null; then
     echo -e "${CONTINUE}wget is installed${ENDCOLOR}"
     export GETTER='wget'
-elif command -v curl >> /dev/null; then
+elif command -v curl > /dev/null; then
     echo -e "${CONTINUE}curl is installed${ENDCOLOR}"
     export GETTER='curl'
 else
     echo -e "${ERROR}Neither wget or curl were found on your system. Please install one and try again${ENDCOLOR}"
     exit 0
 fi
-if command -v java >> /dev/null; then
+if command -v java > /dev/null; then
     echo -e "${CONTINUE}java is installed${ENDCOLOR}"
 else
     echo -e "${ERROR}You NEED java on your system !!! ${ENDCOLOR}"
@@ -36,7 +39,7 @@ if [[ $(cat server-setup-config.yaml | grep 'ramDisk:' | awk 'BEGIN {FS=":"}{pri
     DO_RAMDISK=1
 fi
 
-if [ -f serverstarter.jar ]; then
+if [[ -f serverstarter.jar ]]; then
     echo -e "${INFORMATION}Skipping download. Using existing serverstarter.jar${ENDCOLOR}"
     java -jar serverstarter.jar
         if [[ $DO_RAMDISK -eq 1 ]]; then
