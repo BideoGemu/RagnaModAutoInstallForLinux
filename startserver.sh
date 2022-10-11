@@ -10,16 +10,24 @@ ERROR="\e[3;${RED}"
 INFORMATION="\e[94m"
 ENDCOLOR="\e[0m"
 
+get_wget() {
+    wget -O "$@"
+}
+
+get_curl() {
+    curl -Lo "$@"
+}
+
 mkdir -p server
 cp eula.txt server
 
 echo -e "${INFORMATION}Check requirement on your system.${ENDCOLOR}"
 if command -v wget > /dev/null; then
     echo -e "${CONTINUE}wget is installed${ENDCOLOR}"
-    export GETTER='wget'
+    export GETTER='get_wget'
 elif command -v curl > /dev/null; then
     echo -e "${CONTINUE}curl is installed${ENDCOLOR}"
-    export GETTER='curl'
+    export GETTER='get_curl'
 else
     echo -e "${ERROR}Neither wget or curl were found on your system. Please install one and try again${ENDCOLOR}"
     exit 0
@@ -50,7 +58,7 @@ if [[ -f serverstarter.jar ]]; then
         exit 0
 else
     export URL="https://github.com/Ocraftyone/ServerStarter-CFCorePatch/releases/download/v2.3.1/serverstarter-2.3.1.jar"
-    "${GETTER}" -O serverstarter.jar "${URL}"
+    "${GETTER}" serverstarter.jar "${URL}"
 fi
 
 java -jar serverstarter.jar
