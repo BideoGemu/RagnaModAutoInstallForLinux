@@ -16,8 +16,8 @@ To download the modpack go to https://www.curseforge.com/minecraft/modpacks/ragn
 - Copy mods files for Caged Mobs and BetterEnd(Forge) on mods directory
 - Enter your API Key on server-setup-config.yaml (line 76) : `curseForgeAPIKey: XXX`
 - Put all files on your server
-- Launch `chmod +x startserver.sh`
-- Launch `sh startserver.sh`
+- Launch `chmod u+x startserver.sh`
+- Launch `./startserver.sh`
 
 **Enjoy ! :)**
 
